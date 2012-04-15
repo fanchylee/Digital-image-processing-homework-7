@@ -1,0 +1,19 @@
+%去掉标题日期
+\makeatletter
+\def\@maketitle{%
+ \newpage
+ \null
+ \vskip 2em%
+ \begin{center}%
+ \let \footnote \thanks
+   {\LARGE \@title \par}%
+   \vskip 1.5em%
+   {\large
+     \lineskip .5em%
+     \begin{tabular}[t]{c}%
+       \@author
+     \end{tabular}\par}%
+ \end{center}%
+ \par
+}
+\makeatother
