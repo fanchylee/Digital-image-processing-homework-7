@@ -127,7 +127,7 @@ R=1-\frac{1}{C}
 我使用 C 语言实现了一个简单的可读的针对二值图像的游程编码工具。它可以将 8 位 *.bmp 图像编码为一个文本文件，文本文件中存放为数据长度串，用换行区别不同的行。代码如下：
 \lstinputlisting[language=C,caption=rle.c]{rle.c}
 
-试验图像为图 \ref{exp} 中的图像。这个图像的体积为 136918 B，经过压缩得到的编码的第 26 行（对应图像的底部第 10 行像素点）如代码 \ref{rle} 所示，所得文件的总大小为 34616 B，压缩比为 $136918:34616\approx3.96$。
+试验图像为图 \ref{exp} 中的图像。这个图像的体积为 136918 B，经过压缩得到的编码的第 26 行（对应图像的底部第 10 行像素点）如代码 \ref{rle} 所示，所得文件的总大小为 34633 B，压缩比为 $136918:34633\approx3.95$。
 \lstinputlisting[linerange=26-26,caption=游程编码后的文件,label=rle,frame=none]{f2.bmp.rle}
 \begin{figure}[htbp]
 \centering
