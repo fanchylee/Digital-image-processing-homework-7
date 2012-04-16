@@ -48,7 +48,7 @@ int main(int argc , char * argv[]){
 	fprintf(stderr,"ih.height:%d\n",ih.height);
 	fseek(pic, 0x1e, SEEK_SET);
 	fread(&ih.compress_type, 4, 1, pic);
-	fprintf(stderr,"ih.height:0x%X\n",ih.compress_type);
+	fprintf(stderr,"ih.compresstype:0x%X\n",ih.compress_type);
 	o_str = malloc(strlen(argv[1] + 5));
 	strcpy(o_str, argv[1]);
 	strcat(o_str, ".rle");
@@ -69,9 +69,9 @@ int main(int argc , char * argv[]){
 				}
 			}else{
 				if(counts){
-					fprintf(output, "(%d,%d)",color, counts);
-					counts = 1 ;
+					fprintf(output, "(%d,%d)",color_tmp, counts);
 				}
+				counts = 1 ;
 			}
 			color_tmp = color ;
 		}
